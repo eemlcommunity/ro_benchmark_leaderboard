@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ro_benchmark_leaderboard/static/css/main.c2dc8ad7.chunk.css",
+    "main.js": "/ro_benchmark_leaderboard/static/js/main.0d01b638.chunk.js",
+    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.0d01b638.chunk.js.map",
+    "runtime-main.js": "/ro_benchmark_leaderboard/static/js/runtime-main.271fae36.js",
+    "runtime-main.js.map": "/ro_benchmark_leaderboard/static/js/runtime-main.271fae36.js.map",
+    "static/js/2.496eb7d0.chunk.js": "/ro_benchmark_leaderboard/static/js/2.496eb7d0.chunk.js",
+    "static/js/2.496eb7d0.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.496eb7d0.chunk.js.map",
+    "index.html": "/ro_benchmark_leaderboard/index.html",
+    "precache-manifest.b89e8a42dc22f3286bdc8824e50f9365.js": "/ro_benchmark_leaderboard/precache-manifest.b89e8a42dc22f3286bdc8824e50f9365.js",
+    "service-worker.js": "/ro_benchmark_leaderboard/service-worker.js",
+    "static/css/main.c2dc8ad7.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.c2dc8ad7.chunk.css.map",
+    "static/js/2.496eb7d0.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.496eb7d0.chunk.js.LICENSE.txt",
+    "static/media/graph.svg": "/ro_benchmark_leaderboard/static/media/graph.73b2a148.svg",
+    "static/media/logo.svg": "/ro_benchmark_leaderboard/static/media/logo.5d5d9eef.svg",
+    "static/media/mark-github.svg": "/ro_benchmark_leaderboard/static/media/mark-github.e50abc21.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.271fae36.js",
+    "static/js/2.496eb7d0.chunk.js",
+    "static/css/main.c2dc8ad7.chunk.css",
+    "static/js/main.0d01b638.chunk.js"
+  ]
+}
