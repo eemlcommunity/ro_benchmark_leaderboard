@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ro_benchmark_leaderboard/static/css/main.3aa9bde1.chunk.css",
-    "main.js": "/ro_benchmark_leaderboard/static/js/main.2d841697.chunk.js",
-    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.2d841697.chunk.js.map",
+    "main.js": "/ro_benchmark_leaderboard/static/js/main.58693764.chunk.js",
+    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.58693764.chunk.js.map",
     "runtime-main.js": "/ro_benchmark_leaderboard/static/js/runtime-main.271fae36.js",
     "runtime-main.js.map": "/ro_benchmark_leaderboard/static/js/runtime-main.271fae36.js.map",
     "static/js/2.d3b5781c.chunk.js": "/ro_benchmark_leaderboard/static/js/2.d3b5781c.chunk.js",
     "static/js/2.d3b5781c.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.d3b5781c.chunk.js.map",
     "index.html": "/ro_benchmark_leaderboard/index.html",
-    "precache-manifest.90aed03b93d586f5327796d0b192cd05.js": "/ro_benchmark_leaderboard/precache-manifest.90aed03b93d586f5327796d0b192cd05.js",
+    "precache-manifest.a1d8fc328108051c99abbf604772bec9.js": "/ro_benchmark_leaderboard/precache-manifest.a1d8fc328108051c99abbf604772bec9.js",
     "service-worker.js": "/ro_benchmark_leaderboard/service-worker.js",
     "static/css/main.3aa9bde1.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.3aa9bde1.chunk.css.map",
     "static/js/2.d3b5781c.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.d3b5781c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.271fae36.js",
     "static/js/2.d3b5781c.chunk.js",
     "static/css/main.3aa9bde1.chunk.css",
-    "static/js/main.2d841697.chunk.js"
+    "static/js/main.58693764.chunk.js"
   ]
 }
