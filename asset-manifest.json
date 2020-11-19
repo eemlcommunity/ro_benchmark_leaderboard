@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ro_benchmark_leaderboard/static/css/main.13a618f2.chunk.css",
-    "main.js": "/ro_benchmark_leaderboard/static/js/main.8a90f448.chunk.js",
-    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.8a90f448.chunk.js.map",
+    "main.js": "/ro_benchmark_leaderboard/static/js/main.dbe6b72b.chunk.js",
+    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.dbe6b72b.chunk.js.map",
     "runtime-main.js": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js",
     "runtime-main.js.map": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js.map",
     "static/js/2.b6235d49.chunk.js": "/ro_benchmark_leaderboard/static/js/2.b6235d49.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.64355ccd.js",
     "static/js/2.b6235d49.chunk.js",
     "static/css/main.13a618f2.chunk.css",
-    "static/js/main.8a90f448.chunk.js"
+    "static/js/main.dbe6b72b.chunk.js"
   ]
 }
