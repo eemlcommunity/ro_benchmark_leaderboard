@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 import logging
 import pandas as pd
+from sklearn.metrics import f1_score
 
 
 def load_data(file_name, has_header, predictions_column):
@@ -54,7 +55,12 @@ def eval_f1_score(args):
     logging.info(
         "Evaluating the results from file {} with F1 metric. Average is {}".
         format(args.input_file, args.average))
-    load_data(args.input_file, not args.no_header_row, args.predictions_column)
+    predictions, true_values = load_data(args.input_file,
+                                         not args.no_header_row,
+                                         args.predictions_column)
+    labels = list(set(sorted(true_values)))
+    scores = f1_score(true_values, predictions, average=args.average)
+    display_results(labels, scores)
 
 
 def parse_arguments():
