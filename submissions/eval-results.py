@@ -36,6 +36,20 @@ def load_data(file_name, has_header, predictions_column):
     return predictions, true_values
 
 
+def display_results(labels, scores):
+    """Prints the scores of each label to console.
+
+    Parameters
+    ----------
+    labels: list
+        The labels for each score.
+    scores: list of number
+        The list of scores for each label.
+    """
+    df = pd.DataFrame({'labels': labels, 'scores': scores})
+    print(df)
+
+
 def eval_f1_score(args):
     logging.info(
         "Evaluating the results from file {} with F1 metric. Average is {}".
