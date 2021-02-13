@@ -53,6 +53,13 @@ def display_results(labels, scores):
 
 
 def eval_f1_score(args):
+    """Evaluates the F1 score of the predictions from the input file.
+
+    Parameters
+    ----------
+    args: argparse.Namespace
+        The arguments for F1 metric alongside the common arguments.
+    """
     logging.info(
         "Evaluating the results from file {} with F1 metric. Average is {}".
         format(args.input_file, args.average))
@@ -65,6 +72,13 @@ def eval_f1_score(args):
 
 
 def eval_accuracy_score(args):
+    """Evaluates the accuracy score of the predictions from the input file.
+
+    Parameters
+    ----------
+    args: argparse.Namespace
+        The arguments for accuracy metric alongside the common arguments.
+    """
     logging.info(
         "Evaluating the accuracy of predictions from file {}. Show numbers is {}."
         .format(args.input_file, args.show_num_correct))
