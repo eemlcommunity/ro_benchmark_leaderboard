@@ -2,6 +2,7 @@ from argparse import ArgumentParser
 import logging
 import pandas as pd
 from sklearn.metrics import f1_score
+from sklearn.metrics import accuracy_score
 
 
 def load_data(file_name, has_header, predictions_column):
@@ -63,6 +64,19 @@ def eval_f1_score(args):
     display_results(labels, scores)
 
 
+def eval_accuracy_score(args):
+    logging.info(
+        "Evaluating the accuracy of predictions from file {}. Show numbers is {}."
+        .format(args.input_file, args.show_num_correct))
+    predictions, true_values = load_data(args.input_file,
+                                         not args.no_header_row,
+                                         args.predictions_column)
+    score = accuracy_score(true_values,
+                           predictions,
+                           normalize=not args.show_num_correct)
+    print("Accuracy score is: {}.".format(score))
+
+
 def parse_arguments():
     root_parser = ArgumentParser()
 
@@ -100,6 +114,18 @@ def parse_arguments():
         help="The type of average to perform on the data.",
         choices=['binary', 'micro', 'macro', 'weighted', 'samples'],
         default=None)
+
+    accuracy = subparsers.add_parser(
+        'accuracy',
+        help='Compute the accuracy of predictions from the input file.')
+    accuracy.set_defaults(func=eval_accuracy_score)
+    add_common_arguments(accuracy)
+    accuracy.add_argument(
+        '--show-num-correct',
+        action='store_true',
+        help=
+        "If specified, the score will show the number of correctly classified samples, not the fraction."
+    )
     return root_parser.parse_args()
 
 
