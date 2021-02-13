@@ -65,33 +65,36 @@ def eval_f1_score(args):
 
 def parse_arguments():
     root_parser = ArgumentParser()
-    root_parser.add_argument(
-        '--input-file',
-        help=
-        "The name of the input CSV file containing predictions and true labels"
-    )
-    root_parser.add_argument(
-        '--no-header-row',
-        help=
-        "When provided, specifies that the input file does not have a header row; i.e. the first row of the file contains predictions and true labels.",
-        action='store_true')
-    root_parser.add_argument(
-        '--predictions-column',
-        help=
-        "Zero-based index of the column containing the predictions of the model. Default is 0.",
-        type=int,
-        default=0)
 
-    root_parser.add_argument(
-        '--log-level',
-        help="The level of details to print when running.",
-        choices=['debug', 'info', 'warning', 'error', 'critical'],
-        default='info')
+    def add_common_arguments(parser):
+        parser.add_argument(
+            '--input-file',
+            help=
+            "The name of the input CSV file containing predictions and true labels"
+        )
+        parser.add_argument(
+            '--no-header-row',
+            help=
+            "When provided, specifies that the input file does not have a header row; i.e. the first row of the file contains predictions and true labels.",
+            action='store_true')
+        parser.add_argument(
+            '--predictions-column',
+            help=
+            "Zero-based index of the column containing the predictions of the model. Default is 0.",
+            type=int,
+            default=0)
+
+        parser.add_argument(
+            '--log-level',
+            help="The level of details to print when running.",
+            choices=['debug', 'info', 'warning', 'error', 'critical'],
+            default='info')
 
     subparsers = root_parser.add_subparsers()
     f1 = subparsers.add_parser('f1',
                                help="Compute the F1 score for the input file.")
     f1.set_defaults(func=eval_f1_score)
+    add_common_arguments(f1)
     f1.add_argument(
         '--average',
         help="The type of average to perform on the data.",
