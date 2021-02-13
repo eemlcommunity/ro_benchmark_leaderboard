@@ -91,32 +91,40 @@ def eval_accuracy_score(args):
     print("Accuracy score is: {}.".format(score))
 
 
+def add_common_arguments(parser):
+    """Adds the common arguments to the command-line parser.
+
+    Parameters
+    ----------
+    parser: argparse.ArgumentParser
+        The parser to which to add the arguments.
+    """
+    parser.add_argument(
+        '--input-file',
+        help=
+        "The name of the input CSV file containing predictions and true labels"
+    )
+    parser.add_argument(
+        '--no-header-row',
+        help=
+        "When provided, specifies that the input file does not have a header row; i.e. the first row of the file contains predictions and true labels.",
+        action='store_true')
+    parser.add_argument(
+        '--predictions-column',
+        help=
+        "Zero-based index of the column containing the predictions of the model. Default is 0.",
+        type=int,
+        default=0)
+
+    parser.add_argument(
+        '--log-level',
+        help="The level of details to print when running.",
+        choices=['debug', 'info', 'warning', 'error', 'critical'],
+        default='info')
+
+
 def parse_arguments():
     root_parser = ArgumentParser()
-
-    def add_common_arguments(parser):
-        parser.add_argument(
-            '--input-file',
-            help=
-            "The name of the input CSV file containing predictions and true labels"
-        )
-        parser.add_argument(
-            '--no-header-row',
-            help=
-            "When provided, specifies that the input file does not have a header row; i.e. the first row of the file contains predictions and true labels.",
-            action='store_true')
-        parser.add_argument(
-            '--predictions-column',
-            help=
-            "Zero-based index of the column containing the predictions of the model. Default is 0.",
-            type=int,
-            default=0)
-
-        parser.add_argument(
-            '--log-level',
-            help="The level of details to print when running.",
-            choices=['debug', 'info', 'warning', 'error', 'critical'],
-            default='info')
 
     subparsers = root_parser.add_subparsers()
     f1 = subparsers.add_parser('f1',
