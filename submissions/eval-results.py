@@ -91,6 +91,17 @@ def eval_accuracy_score(args):
     print("Accuracy score is: {}.".format(score))
 
 
+def eval_precision_score(args):
+    """Evaluates the accuracy score of the predictions from the input file.
+
+    Parameters
+    ----------
+    args: argparse.Namespace
+        The arguments for accuracy metric alongside the common arguments.
+    """
+    pass
+
+
 def add_common_arguments(parser):
     """Adds the common arguments to the command-line parser.
 
@@ -127,11 +138,13 @@ def parse_arguments():
     root_parser = ArgumentParser()
 
     subparsers = root_parser.add_subparsers()
-    f1 = subparsers.add_parser('f1',
-                               help="Compute the F1 score for the input file.")
-    f1.set_defaults(func=eval_f1_score)
-    add_common_arguments(f1)
-    f1.add_argument(
+
+    precision = subparsers.add_parser(
+        'precision',
+        help='Compute the precision of the predictions from the input file.')
+    precision.set_defaults(func=eval_precision_score)
+    add_common_arguments(precision)
+    precision.add_argument(
         '--average',
         help="The type of average to perform on the data.",
         choices=['binary', 'micro', 'macro', 'weighted', 'samples'],
@@ -148,6 +161,17 @@ def parse_arguments():
         help=
         "If specified, the score will show the number of correctly classified samples, not the fraction."
     )
+
+    f1 = subparsers.add_parser('f1',
+                               help="Compute the F1 score for the input file.")
+    f1.set_defaults(func=eval_f1_score)
+    add_common_arguments(f1)
+    f1.add_argument(
+        '--average',
+        help="The type of average to perform on the data.",
+        choices=['binary', 'micro', 'macro', 'weighted', 'samples'],
+        default=None)
+
     return root_parser.parse_args()
 
 
