@@ -72,7 +72,7 @@ def get_labels(true_values):
     return list(set(sorted(true_values)))
 
 
-def display_results(labels, scores):
+def display_results(labels, scores, metric=None):
     """Prints the scores of each label to console.
 
     Parameters
@@ -81,9 +81,18 @@ def display_results(labels, scores):
         The labels for each score.
     scores: list of number
         The list of scores for each label.
+    metric: str
+        The name of the metric for which to display results.
     """
-    df = pd.DataFrame({'label': labels, 'score': scores})
-    print(df)
+    if isinstance(scores, np.ndarray):
+        score_header = 'Score' if not metric else "{} score".forma(metric)
+        df = pd.DataFrame({'Label': labels, score_header: scores})
+        print(df)
+    else:
+        message = "{} score is: {}.".format(
+            metric.capitalize(),
+            scores) if metric else "Score is: {}.".format(scores)
+        print(message)
 
 
 def eval_f1_score(args):
@@ -99,7 +108,7 @@ def eval_f1_score(args):
         format(args.input_file, args.average))
     predictions, true_values = load_data_from_args(args)
     scores = f1_score(true_values, predictions, average=args.average)
-    display_results(get_labels(true_values), scores)
+    display_results(get_labels(true_values), scores, metric="F1")
 
 
 def eval_accuracy_score(args):
@@ -117,7 +126,7 @@ def eval_accuracy_score(args):
     score = accuracy_score(true_values,
                            predictions,
                            normalize=not args.show_num_correct)
-    print("Accuracy score is: {}.".format(score))
+    display_results(get_labels(true_values), score, metric="Accuracy")
 
 
 def eval_precision_score(args):
@@ -133,10 +142,8 @@ def eval_precision_score(args):
         format(args.input_file, args.average))
     predictions, true_values = load_data_from_args(args)
     score = precision_score(true_values, predictions, average=args.average)
-    if isinstance(score, np.ndarray):
-        display_results(get_labels(true_values), score)
-    else:
-        print("Precision score is: {}.".format(score))
+
+    display_results(get_labels(true_values), score, metric="Precision")
 
 
 def add_common_arguments(parser):
