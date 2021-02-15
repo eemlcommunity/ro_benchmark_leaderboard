@@ -1,8 +1,10 @@
 from argparse import ArgumentParser
 import logging
 import pandas as pd
+import numpy as np
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
 
 
 def load_data(file_name, has_header, predictions_column):
@@ -38,6 +40,22 @@ def load_data(file_name, has_header, predictions_column):
     return predictions, true_values
 
 
+def load_data_from_args(args):
+    """Reads the predictions and true values from the input file.
+
+    Parameters
+    ----------
+    args: argparse.Namespace
+        The command-line arguments for reading the data.
+
+    Returns
+    -------
+    (predictions, true_values), tuple of lists representing predictions and true values.
+    """
+    return load_data(args.input_file, not args.no_header_row,
+                     args.predictions_column)
+
+
 def display_results(labels, scores):
     """Prints the scores of each label to console.
 
@@ -48,7 +66,7 @@ def display_results(labels, scores):
     scores: list of number
         The list of scores for each label.
     """
-    df = pd.DataFrame({'labels': labels, 'scores': scores})
+    df = pd.DataFrame({'label': labels, 'score': scores})
     print(df)
 
 
@@ -63,9 +81,7 @@ def eval_f1_score(args):
     logging.info(
         "Evaluating the results from file {} with F1 metric. Average is {}".
         format(args.input_file, args.average))
-    predictions, true_values = load_data(args.input_file,
-                                         not args.no_header_row,
-                                         args.predictions_column)
+    predictions, true_values = load_data_from_args(args)
     labels = list(set(sorted(true_values)))
     scores = f1_score(true_values, predictions, average=args.average)
     display_results(labels, scores)
@@ -82,9 +98,7 @@ def eval_accuracy_score(args):
     logging.info(
         "Evaluating the accuracy of predictions from file {}. Show numbers is {}."
         .format(args.input_file, args.show_num_correct))
-    predictions, true_values = load_data(args.input_file,
-                                         not args.no_header_row,
-                                         args.predictions_column)
+    predictions, true_values = load_data_from_args(args)
     score = accuracy_score(true_values,
                            predictions,
                            normalize=not args.show_num_correct)
@@ -92,14 +106,23 @@ def eval_accuracy_score(args):
 
 
 def eval_precision_score(args):
-    """Evaluates the accuracy score of the predictions from the input file.
+    """Evaluates the precision score of the predictions from the input file.
 
     Parameters
     ----------
     args: argparse.Namespace
         The arguments for accuracy metric alongside the common arguments.
     """
-    pass
+    logging.info(
+        "Evaluating the precision of predictions from file {}. Average is {}.".
+        format(args.input_file, args.average))
+    predictions, true_values = load_data_from_args(args)
+    score = precision_score(true_values, predictions, average=args.average)
+    if isinstance(score, np.ndarray):
+        labels = list(set(sorted(true_values)))
+        display_results(labels, score)
+    else:
+        print("Precision score is: {}.".format(score))
 
 
 def add_common_arguments(parser):
