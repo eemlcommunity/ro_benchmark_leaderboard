@@ -168,6 +168,7 @@ def add_common_arguments(parser):
         '--predictions-column',
         help=
         "Zero-based index of the column containing the predictions of the model. Default is 0.",
+        choices=[0, 1],
         type=int,
         default=0)
 
