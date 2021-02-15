@@ -56,6 +56,22 @@ def load_data_from_args(args):
                      args.predictions_column)
 
 
+def get_labels(true_values):
+    """Builds the collection of labels from true values.
+
+    Parameters
+    ----------
+    true_values: iterable
+        The collection of true values from which to get the labels.
+
+    Returns
+    -------
+    labels: iterable
+        The collection of labels.
+    """
+    return list(set(sorted(true_values)))
+
+
 def display_results(labels, scores):
     """Prints the scores of each label to console.
 
@@ -82,9 +98,8 @@ def eval_f1_score(args):
         "Evaluating the results from file {} with F1 metric. Average is {}".
         format(args.input_file, args.average))
     predictions, true_values = load_data_from_args(args)
-    labels = list(set(sorted(true_values)))
     scores = f1_score(true_values, predictions, average=args.average)
-    display_results(labels, scores)
+    display_results(get_labels(true_values), scores)
 
 
 def eval_accuracy_score(args):
@@ -119,8 +134,7 @@ def eval_precision_score(args):
     predictions, true_values = load_data_from_args(args)
     score = precision_score(true_values, predictions, average=args.average)
     if isinstance(score, np.ndarray):
-        labels = list(set(sorted(true_values)))
-        display_results(labels, score)
+        display_results(get_labels(true_values), score)
     else:
         print("Precision score is: {}.".format(score))
 
