@@ -2,7 +2,7 @@
 
 LiRo benchmark provides an evaluation script to allow you to calculate the scores before submission and also to make the evaluation more transparent.
 
-However, to use the script you'll need to [setup a virtual environment](https://docs.python.org/3/library/venv.html). You _can_ install the dependencies from [requirements.txt](./requirements.txt "Requirements file") to be available system-wide but that is not a recommended approach.
+However, to use the script you'll need to [setup a virtual environment](https://docs.python.org/3/library/venv.html). You _can_ install the dependencies from [requirements.txt](../requirements.txt "Requirements file") to be available system-wide but that is not a recommended approach.
 
 After setting the virtual environment (given that you've already cloned this repository) and activating it you can use the evaluation script as follows:
 ```sh
