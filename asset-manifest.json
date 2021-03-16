@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/ro_benchmark_leaderboard/static/css/main.eef10556.chunk.css",
-    "main.js": "/ro_benchmark_leaderboard/static/js/main.7d7e7057.chunk.js",
-    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.7d7e7057.chunk.js.map",
+    "main.js": "/ro_benchmark_leaderboard/static/js/main.fb26e3a4.chunk.js",
+    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.fb26e3a4.chunk.js.map",
     "runtime-main.js": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js",
     "runtime-main.js.map": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js.map",
-    "static/js/2.00958dba.chunk.js": "/ro_benchmark_leaderboard/static/js/2.00958dba.chunk.js",
-    "static/js/2.00958dba.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.00958dba.chunk.js.map",
+    "static/js/2.6a10e36f.chunk.js": "/ro_benchmark_leaderboard/static/js/2.6a10e36f.chunk.js",
+    "static/js/2.6a10e36f.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.6a10e36f.chunk.js.map",
     "index.html": "/ro_benchmark_leaderboard/index.html",
     "static/css/main.eef10556.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.eef10556.chunk.css.map",
-    "static/js/2.00958dba.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.00958dba.chunk.js.LICENSE.txt"
+    "static/js/2.6a10e36f.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.6a10e36f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64355ccd.js",
-    "static/js/2.00958dba.chunk.js",
+    "static/js/2.6a10e36f.chunk.js",
     "static/css/main.eef10556.chunk.css",
-    "static/js/main.7d7e7057.chunk.js"
+    "static/js/main.fb26e3a4.chunk.js"
   ]
 }
