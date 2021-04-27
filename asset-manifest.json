@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ro_benchmark_leaderboard/static/css/main.da9cdc01.chunk.css",
-    "main.js": "/ro_benchmark_leaderboard/static/js/main.fad0c1a2.chunk.js",
-    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.fad0c1a2.chunk.js.map",
+    "main.css": "/ro_benchmark_leaderboard/static/css/main.ceec63c2.chunk.css",
+    "main.js": "/ro_benchmark_leaderboard/static/js/main.f852836b.chunk.js",
+    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.f852836b.chunk.js.map",
     "runtime-main.js": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js",
     "runtime-main.js.map": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js.map",
-    "static/js/2.9f07a651.chunk.js": "/ro_benchmark_leaderboard/static/js/2.9f07a651.chunk.js",
-    "static/js/2.9f07a651.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.9f07a651.chunk.js.map",
+    "static/js/2.17365e66.chunk.js": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js",
+    "static/js/2.17365e66.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js.map",
     "index.html": "/ro_benchmark_leaderboard/index.html",
-    "static/css/main.da9cdc01.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.da9cdc01.chunk.css.map",
-    "static/js/2.9f07a651.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.9f07a651.chunk.js.LICENSE.txt",
+    "static/css/main.ceec63c2.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.ceec63c2.chunk.css.map",
+    "static/js/2.17365e66.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js.LICENSE.txt",
     "static/media/logo-banner.75fcd774.png": "/ro_benchmark_leaderboard/static/media/logo-banner.75fcd774.png"
   },
   "entrypoints": [
     "static/js/runtime-main.64355ccd.js",
-    "static/js/2.9f07a651.chunk.js",
-    "static/css/main.da9cdc01.chunk.css",
-    "static/js/main.fad0c1a2.chunk.js"
+    "static/js/2.17365e66.chunk.js",
+    "static/css/main.ceec63c2.chunk.css",
+    "static/js/main.f852836b.chunk.js"
   ]
 }
