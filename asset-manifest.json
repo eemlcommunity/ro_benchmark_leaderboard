@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ro_benchmark_leaderboard/static/css/main.ceec63c2.chunk.css",
-    "main.js": "/ro_benchmark_leaderboard/static/js/main.3e910b14.chunk.js",
-    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.3e910b14.chunk.js.map",
+    "main.css": "/ro_benchmark_leaderboard/static/css/main.c875da1a.chunk.css",
+    "main.js": "/ro_benchmark_leaderboard/static/js/main.434281e7.chunk.js",
+    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.434281e7.chunk.js.map",
     "runtime-main.js": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js",
     "runtime-main.js.map": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js.map",
     "static/js/2.17365e66.chunk.js": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js",
     "static/js/2.17365e66.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js.map",
     "index.html": "/ro_benchmark_leaderboard/index.html",
-    "static/css/main.ceec63c2.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.ceec63c2.chunk.css.map",
+    "static/css/main.c875da1a.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.c875da1a.chunk.css.map",
     "static/js/2.17365e66.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js.LICENSE.txt",
     "static/media/logo-banner.75fcd774.png": "/ro_benchmark_leaderboard/static/media/logo-banner.75fcd774.png"
   },
   "entrypoints": [
     "static/js/runtime-main.64355ccd.js",
     "static/js/2.17365e66.chunk.js",
-    "static/css/main.ceec63c2.chunk.css",
-    "static/js/main.3e910b14.chunk.js"
+    "static/css/main.c875da1a.chunk.css",
+    "static/js/main.434281e7.chunk.js"
   ]
 }
