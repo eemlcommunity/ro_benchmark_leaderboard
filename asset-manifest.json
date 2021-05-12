@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/ro_benchmark_leaderboard/static/css/main.48c8a664.chunk.css",
-    "main.js": "/ro_benchmark_leaderboard/static/js/main.e4367d43.chunk.js",
-    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.e4367d43.chunk.js.map",
+    "main.js": "/ro_benchmark_leaderboard/static/js/main.fda4e1c0.chunk.js",
+    "main.js.map": "/ro_benchmark_leaderboard/static/js/main.fda4e1c0.chunk.js.map",
     "runtime-main.js": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js",
     "runtime-main.js.map": "/ro_benchmark_leaderboard/static/js/runtime-main.64355ccd.js.map",
-    "static/js/2.967f271d.chunk.js": "/ro_benchmark_leaderboard/static/js/2.967f271d.chunk.js",
-    "static/js/2.967f271d.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.967f271d.chunk.js.map",
+    "static/js/2.17365e66.chunk.js": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js",
+    "static/js/2.17365e66.chunk.js.map": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js.map",
     "index.html": "/ro_benchmark_leaderboard/index.html",
     "static/css/main.48c8a664.chunk.css.map": "/ro_benchmark_leaderboard/static/css/main.48c8a664.chunk.css.map",
-    "static/js/2.967f271d.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.967f271d.chunk.js.LICENSE.txt",
+    "static/js/2.17365e66.chunk.js.LICENSE.txt": "/ro_benchmark_leaderboard/static/js/2.17365e66.chunk.js.LICENSE.txt",
     "static/media/logo-banner.75fcd774.png": "/ro_benchmark_leaderboard/static/media/logo-banner.75fcd774.png"
   },
   "entrypoints": [
     "static/js/runtime-main.64355ccd.js",
-    "static/js/2.967f271d.chunk.js",
+    "static/js/2.17365e66.chunk.js",
     "static/css/main.48c8a664.chunk.css",
-    "static/js/main.e4367d43.chunk.js"
+    "static/js/main.fda4e1c0.chunk.js"
   ]
 }
